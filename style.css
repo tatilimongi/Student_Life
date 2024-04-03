@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #000119;
   color: white;
   font-size: 8em;
   font-family: "Inconsolata";
@@ -40,26 +40,41 @@ main {
 
 .work {
   animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+  color: #00a2ff00;
+  background-clip: text;
+  background-image: linear-gradient(to right, #33ff00, #d0ff00);
 }
 
 .study {
   animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+  color: #00a2ff00;
+  background-clip: text;
+  background-image: linear-gradient(to right, #ab11f3, #00ccff);
 }
 
 .life {
-  background: linear-gradient(
-    45deg,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
+  background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    #09f1b8,
+    #00a2ff,
+    #ff00d2,
+    #fed90f
   );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: rainbowEffect 5s infinite;
+  color: var(--color-background);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  padding: calc(--stroke-width / 2);
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: var(--stroke-width);
+}
+
+:root {
+  --color-background: #000119;
+  --stroke-width: calc(1em / 16);
+  --font-size: 8vw;
+  --font-weight: 700;
+  --letter-spacing: calc(1em / 8);
 }
 
 @keyframes rainbowEffect {
