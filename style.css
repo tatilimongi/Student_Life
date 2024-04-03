@@ -27,7 +27,7 @@ main {
 }
 
 .static {
-  font-size: 30px;
+  font-size: 3vw;
   font-variation-settings: "wght" 900, "wdth" 200;
 }
 
@@ -61,29 +61,15 @@ main {
     #ff00d2,
     #fed90f
   );
-  color: var(--color-background);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  padding: calc(--stroke-width / 2);
+  color: #000119;
   -webkit-text-stroke-color: transparent;
-  -webkit-text-stroke-width: var(--stroke-width);
+  -webkit-text-stroke-width: calc(1em / 16);
 }
 
-:root {
-  --color-background: #000119;
-  --stroke-width: calc(1em / 16);
-  --font-size: 8vw;
-  --font-weight: 700;
-  --letter-spacing: calc(1em / 8);
-}
-
-@keyframes rainbowEffect {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+.work,
+.study,
+.life {
+  font-size: 8vw;
 }
 
 @keyframes swapthings {
@@ -111,5 +97,11 @@ main {
 
   100% {
     font-variation-settings: "wght" 900, "wdth" 200;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .variable {
+    font-size: 4vw;
   }
 }
