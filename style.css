@@ -35,73 +35,64 @@ main {
   display: flex;
   font-variation-settings: "wght" 275, "wdth" 50;
   text-align: center;
-  animation: swapthings 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+}
+
+.work,
+.life,
+.study {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 150px;
+  height: 100px;
+  margin-bottom: 50px;
 }
 
 .work {
   animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
-  color: #00a2ff00;
-  background-clip: text;
-  background-image: linear-gradient(to right, #33ff00, #d0ff00);
+  background-image: url("img/71exEZJrhxL._AC_UF894\,1000_QL80_.jpg");
 }
 
 .study {
   animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
-  color: #00a2ff00;
-  background-clip: text;
-  background-image: linear-gradient(to right, #ab11f3, #00ccff);
+  background-image: url("img/71exEZJrhxL._AC_UF894\,1000_QL80_.jpg");
 }
 
 .life {
-  background-clip: text;
-  background-image: linear-gradient(
-    to right,
-    #09f1b8,
-    #00a2ff,
-    #ff00d2,
-    #fed90f
-  );
-  color: #000119;
-  -webkit-text-stroke-color: transparent;
-  -webkit-text-stroke-width: calc(1em / 16);
-}
-
-.work,
-.study,
-.life {
-  font-size: 8vw;
+  animation: swapthings 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+  background-image: url("img/51kCp9M6znL.jpg");
 }
 
 @keyframes swapthings {
   0% {
-    font-variation-settings: "wght" 275, "wdth" 50;
+    font-variation-settings: "wdth" 50;
+    transform: scaleX(1);
   }
 
   50% {
-    font-variation-settings: "wght" 900, "wdth" 200;
+    font-variation-settings: "wdth" 200;
+    transform: scaleX(0.5);
   }
 
   100% {
-    font-variation-settings: "wght" 275, "wdth" 50;
+    font-variation-settings: "wdth" 50;
+    transform: scaleX(1);
   }
 }
 
 @keyframes swapthings2 {
   0% {
-    font-variation-settings: "wght" 900, "wdth" 200;
+    font-variation-settings: "wdth" 50;
+    transform: scaleX(0.5);
   }
 
   50% {
-    font-variation-settings: "wght" 275, "wdth" 50;
+    font-variation-settings: "wdth" 200;
+    transform: scaleX(1);
   }
 
   100% {
-    font-variation-settings: "wght" 900, "wdth" 200;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .variable {
-    font-size: 4vw;
+    font-variation-settings: "wdth" 50;
+    transform: scaleX(0.5);
   }
 }
